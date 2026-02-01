@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Important Question 👀</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+    }
+
+    .box {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 90%;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 25px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      background: #ccc;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>Hema Narayana Prabhu Vijayakumar </h1>
+    <p>(aka Prabhu, calm down)</p>
+    <h2>Will you be my Valentine? </h2>
+    <p>Think carefully. Very carefully.</p>
+    <button id="yes" onclick="yesClicked()">YES 🥰</button>
+  </div>
+
+  <button id="no">NO 🙄</button>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 60);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="
+          height:100vh;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          flex-direction:column;
+          background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+          font-family:'Comic Sans MS', cursive;
+          text-align:center;
+          padding:20px;
+        ">
+          <h1 style="color:#ff1e56;">GOOD BOY </h1>
+          <h2>Prabhu is officially my Valentine </h2>
+       `;
+    }
+  </script>
+
+</body>
+</html>
